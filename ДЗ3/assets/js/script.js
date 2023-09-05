@@ -30,7 +30,36 @@ function IMT(){
     let height = document.getElementById("height").value/100;
 
     let IMT = weight / (height*height);
+    let status;
+    switch(true)
+    {
+        case (IMT < 16):
+        status = "Значительный дефицит массы тела";
+        break;
 
-    document.getElementById("IMT").innerHTML = 'ИМТ = ' + IMT;
+        case (IMT > 16 && IMT < 18.5):
+        status = "Недостаток массы тела";
+        break;
+
+        case (IMT > 18.5 && IMT < 25):
+        status = "Норма веса";
+        break;
+
+        case (IMT > 25 && IMT < 30):
+        status = "Излишек массы тела";
+        break;
+        case (IMT > 30 && IMT < 35):
+        status = "Начальная степень ожирения";
+        break;
+        case (IMT > 35 && IMT < 40):
+        status = "Средняя степень ожирения";
+        break;
+        case (IMT > 40):
+        status = "Ожирение высокой степени";
+        break;
+    }
+
+
+    document.getElementById("IMT").innerHTML = 'ИМТ = ' + IMT + ' (' + status + ')';
 
 }
