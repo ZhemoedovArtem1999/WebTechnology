@@ -1,6 +1,12 @@
+
+
 function HelloName(){
     let name = document.getElementById("name").value;
-    prompt("Привет, " + name);
+    alert("Привет, " + name);
+
+    let name1 =  prompt("Второй вариант: Введите имя","Имя");
+
+    alert("Вывод второго варианта - Привет, " + name1);
     
 }
 
