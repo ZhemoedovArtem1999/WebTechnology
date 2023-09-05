@@ -1,0 +1,17 @@
+body{
+   margin: auto;
+   width: 80%;
+}
+
+header{
+    background-color: aqua;
+    font-size: 36px;
+    text-align: center;
+}
+.flexable{
+    display: flex;
+    justify-content: space-between;
+}
+p, li{
+    font-size: 20px;
+}
